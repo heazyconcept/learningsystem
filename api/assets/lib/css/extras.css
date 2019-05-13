@@ -1,0 +1,541 @@
+.mw-30 {
+    max-width: 30%;
+    
+}
+.mb-30{
+    margin-bottom: 30px;
+}
+.btn-solid-primary {
+    background: #f1a31c;
+    color: #fff;
+    border: 1px solid #f1a31c;
+}
+.btn-solid-primary:hover {
+    background: #000;
+    color: #fff;
+    border: 1px solid #000;
+}
+.az-signup-header h2 {
+    font-weight: 500;
+    color: #f8ad26;
+    letter-spacing: -1px;
+}
+.btn-az-primary:not(:disabled):not(.disabled):active:focus, .btn-az-primary:not(:disabled):not(.disabled).active:focus, .show > .btn-az-primary.dropdown-toggle:focus {
+    box-shadow: 0 0 0 0.2rem #f1a31c7a;
+}
+.btn-az-primary:not(:disabled):not(.disabled):active, .btn-az-primary:not(:disabled):not(.disabled).active, .show > .btn-az-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #f1a31c;
+    border-color: #f1a31c;
+}
+.btn-az-primary {
+    color: #fff;
+    background-color: #f1a31c;
+    border-color:  #f1a31c;
+}
+.btn-az-primary:hover {
+    color: #fff;
+    background-color: #000;
+    border-color:  #000;
+}
+.az-signin-header h2 {
+    font-weight: 500;
+    color: #f5b83a;
+    letter-spacing: -1px;
+}
+.az-signin-footer a:hover, .az-signin-footer a:focus {
+    color: #f1a31c;
+}
+.mw-40{
+    max-width: 40%;
+}
+.mw-80{
+    max-width: 80%;
+}
+.az-sidebar-indigo-dark {
+    background-color: #f1a31c;
+    border-right-width: 0;
+}
+.az-sidebar-indigo-dark .az-sidebar-loggedin .media-body h6 {
+    color: #000;
+    font-weight: 500;
+}
+.az-sidebar-indigo-dark .az-sidebar-loggedin .media-body span {
+    color: rgb(0, 0, 0);
+}
+.az-sidebar-indigo-dark .az-sidebar-body .nav-item.active::before {
+    content: '';
+    position: absolute;
+    top: -1px;
+    left: -20px;
+    right: -20px;
+    background-color: #000;
+    height: 41px;
+}
+.az-sidebar-indigo-dark .az-sidebar-body .nav-link.with-sub::after {
+    opacity: 1;
+}
+
+.az-sidebar-body .nav-link {
+    position: relative;
+}
+.az-sidebar-indigo-dark .az-sidebar-body .nav-sub-link {
+    padding-left: 23px;
+    color: rgb(0, 0, 0);
+    border-top-color: rgba(255, 255, 255, 0.1);
+    position: relative;
+    z-index: 5;
+}
+.az-sidebar-indigo-dark .az-sidebar-body .nav-sub-link:hover, .az-sidebar-indigo-dark .az-sidebar-body .nav-sub-link:focus {
+    color: #000;
+}
+.az-sidebar-indigo-dark .az-sidebar-body .nav-link {
+    color: rgb(0, 0, 0);
+    font-weight: 400;
+}
+.az-sidebar-indigo-dark .az-sidebar-body .nav-link:hover, .az-sidebar-indigo-dark .az-sidebar-body .nav-link:focus {
+    color: rgb(0, 0, 0);
+}
+.possible-result {
+    position: absolute;
+    background: #fff;
+    width: 97%;
+    margin: auto;
+    padding: 0 10px;
+    z-index: 10;
+}
+.result-item {
+    padding: 10px;
+    border-bottom: 1px dotted #0000002e;
+    cursor: pointer;
+    /* margin-bottom: 10px; */
+}
+.az-toggle span::before {
+    content: 'Yes';
+}
+.az-toggle span::after {
+    content: 'No';
+    
+}
+.az-body-dashboard-nine {
+    background-color: #fff;
+}
+.sep-section {
+    background: #f9f9f9;
+    padding: 20px;
+}
+.az-contact-info-body .media-icon {
+    font-size: 16px;
+    color: #000000;
+    font-family: "Montserrat";
+}
+.light-grey{
+    background: #f1f1f1;
+}
+.user-action {
+    position: relative;
+    top: -28px;
+    padding: 0 30px;
+}
+input#userSearch {
+    border-radius: 20px;
+    max-height: 27px;
+}
+
+.user-search-wrapper {
+    margin-bottom: 5px;
+}
+.az-content-body-contacts .row {
+    width: 100%;
+}
+.user-dashboard.az-minimal {
+    padding: 0;
+}
+.user-dashboard .az-header {
+    background: #faa61a;
+}
+.bet-lists {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+.bet-item .card-text {
+    color: #fff!important;
+    text-align: center;
+    font-size: 15px;
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.az-form-group {
+    padding: 6px 6px;
+    border: 1px solid #ced4da;
+}
+.bg-gray-800 {
+    background-color: #000;
+}
+.az-content-body-profile .az-nav-line .nav-link.active {
+    color: #faa61a;
+}
+.az-content-body-profile .az-nav-line .nav-link.active::before {
+    background-color: #faa61a;
+}
+.user-dashboard .btn-primary {
+    color: #fff;
+    background-color: #000000;
+    border-color: #000000;
+}
+.user-dashboard .btn-primary:hover {
+    color: #fff;
+    background-color: #faa61a;
+    border-color: #faa61a;
+}
+.az-navbar-three .nav-item.active .nav-link {
+    color: #ffffff;
+    font-weight: 700;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color:  #faa61a;;
+    border-color: #faa61a;
+}
+.btn-user-action{
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+.pull-right {
+    float: right;
+}
+.wd-1p {
+    width: 1%;
+}
+.wd-2p {
+    width: 2%;
+}
+.wd-3p {
+    width: 3%;
+}
+.wd-4p {
+    width: 4%;
+}
+.wd-5p {
+    width: 5%;
+}
+.wd-6p {
+    width: 6%;
+}
+.wd-7p {
+    width: 7%;
+}
+.wd-8p {
+    width: 8%;
+}
+.wd-9p {
+    width: 9%;
+}
+.wd-10p {
+    width: 10%;
+}
+.wd-11p {
+    width: 11%;
+}
+.wd-12p {
+    width: 12%;
+}
+.wd-13p {
+    width: 13%;
+}
+.wd-14p {
+    width: 14%;
+}
+.wd-15p {
+    width: 15%;
+}
+.wd-16p {
+    width: 16%;
+}
+.wd-17p {
+    width: 17%;
+}
+.wd-18p {
+    width: 18%;
+}
+.wd-19p {
+    width: 19%;
+}
+.wd-20p {
+    width: 20%;
+}
+.wd-21p {
+    width: 21%;
+}
+.wd-22p {
+    width: 22%;
+}
+.wd-23p {
+    width: 23%;
+}
+.wd-24p {
+    width: 24%;
+}
+.wd-25p {
+    width: 25%;
+}
+.wd-26p {
+    width: 26%;
+}
+.wd-27p {
+    width: 27%;
+}
+.wd-28p {
+    width: 28%;
+}
+.wd-29p {
+    width: 29%;
+}
+.wd-30p {
+    width: 30%;
+}
+.wd-31p {
+    width: 31%;
+}
+.wd-32p {
+    width: 32%;
+}
+.wd-33p {
+    width: 33%;
+}
+.wd-34p {
+    width: 34%;
+}
+.wd-35p {
+    width: 35%;
+}
+.wd-36p {
+    width: 36%;
+}
+.wd-37p {
+    width: 37%;
+}
+.wd-38p {
+    width: 38%;
+}
+.wd-39p {
+    width: 39%;
+}
+.wd-40p {
+    width: 40%;
+}
+.wd-41p {
+    width: 41%;
+}
+.wd-42p {
+    width: 42%;
+}
+.wd-43p {
+    width: 43%;
+}
+.wd-44p {
+    width: 44%;
+}
+.wd-45p {
+    width: 45%;
+}
+.wd-46p {
+    width: 46%;
+}
+.wd-47p {
+    width: 47%;
+}
+.wd-48p {
+    width: 48%;
+}
+.wd-49p {
+    width: 49%;
+}
+.wd-50p {
+    width: 50%;
+}
+.wd-51p {
+    width: 51%;
+}
+.wd-52p {
+    width: 52%;
+}
+.wd-53p {
+    width: 53%;
+}
+.wd-54p {
+    width: 54%;
+}
+.wd-55p {
+    width: 55%;
+}
+.wd-56p {
+    width: 56%;
+}
+.wd-57p {
+    width: 57%;
+}
+.wd-58p {
+    width: 58%;
+}
+.wd-59p {
+    width: 59%;
+}
+.wd-60p {
+    width: 60%;
+}
+.wd-61p {
+    width: 61%;
+}
+.wd-62p {
+    width: 62%;
+}
+.wd-63p {
+    width: 63%;
+}
+.wd-64p {
+    width: 64%;
+}
+.wd-65p {
+    width: 65%;
+}
+.wd-66p {
+    width: 66%;
+}
+.wd-67p {
+    width: 67%;
+}
+.wd-68p {
+    width: 68%;
+}
+.wd-69p {
+    width: 69%;
+}
+.wd-70p {
+    width: 70%;
+}
+.wd-71p {
+    width: 71%;
+}
+.wd-72p {
+    width: 72%;
+}
+.wd-73p {
+    width: 73%;
+}
+.wd-74p {
+    width: 74%;
+}
+.wd-75p {
+    width: 75%;
+}
+.wd-76p {
+    width: 76%;
+}
+.wd-77p {
+    width: 77%;
+}
+.wd-78p {
+    width: 78%;
+}
+.wd-79p {
+    width: 79%;
+}
+.wd-80p {
+    width: 80%;
+}
+.wd-81p {
+    width: 81%;
+}
+.wd-82p {
+    width: 82%;
+}
+.wd-83p {
+    width: 83%;
+}
+.wd-84p {
+    width: 84%;
+}
+.wd-85p {
+    width: 85%;
+}
+.wd-86p {
+    width: 86%;
+}
+.wd-87p {
+    width: 87%;
+}
+.wd-88p {
+    width: 88%;
+}
+.wd-89p {
+    width: 89%;
+}
+.wd-90p {
+    width: 90%;
+}
+.wd-91p {
+    width: 91%;
+}
+.wd-92p {
+    width: 92%;
+}
+.wd-93p {
+    width: 93%;
+}
+.wd-94p {
+    width: 94%;
+}
+.wd-95p {
+    width: 95%;
+}
+.wd-96p {
+    width: 96%;
+}
+.wd-97p {
+    width: 97%;
+}
+.wd-98p {
+    width: 98%;
+}
+.wd-99p {
+    width: 99%;
+}
+.wd-100p {
+    width: 100%;
+}
+.az-sidebar-body .nav-link {
+    font-size: 16px;
+    height: 50px;
+}
+.az-sidebar-indigo-dark .az-sidebar-body .nav-item.active::before {
+    height: 50px;
+}
+@media (min-width: 992px){
+.az-contact-info-body .media-list {
+    padding: 25px 10px;
+}
+.az-content-left-profile {
+    width: 250px;
+}
+}
+@media(min-width: 768px){
+    .general-section .col-lg-2 {
+        max-width: 14%!important;
+    }
+    .az-content-left-contacts {
+        width: 100%;
+    }
+    /* .az-content-body-contacts .col-md-3 {
+        flex: 0 0 35%;
+        max-width: 25%;
+    } */
+
+}
+a,li,div,p,h1,h2,h3,h4,h5,h6{
+    font-family: 'Montserrat';
+}

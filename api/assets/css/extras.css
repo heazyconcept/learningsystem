@@ -1,0 +1,901 @@
+.brand-logo {
+    width: 15%;
+}
+.navbar .navbar-nav .mega-menu-container {
+    right: -23.1%;
+    left: -18%;
+    padding: 30px 0;
+}
+.img-responsive {
+    max-width: 100%;
+}
+/* table style */
+.panel {
+    border: none;
+    background-color: #2321229e;
+}
+.panel .btn-group {
+	margin: 15px 0 30px;
+}
+.panel .btn-group .btn {
+	transition: background-color .3s ease;
+}
+.result-signal {
+    padding: 3px 10px;
+    border-radius: 7px;
+    min-width: 31px;
+    display: block;
+}
+/* table style end */
+
+.slide-content {
+    position: absolute;
+    top: 20%;
+    width: 100%;
+}
+.slide-content td {
+    color: #fff;
+    font-size: 13px;
+    font-family: "Montserrat";
+}
+.bg-success {
+    background-color: #48b54a;
+}
+.bg-danger {
+    background-color: #d24136;
+}
+.action-container {
+    margin-top: -49px;
+    margin-bottom: 30px;
+}
+.btn-slide-action {
+    background: #000;
+    color: #fff;
+    font-family: "Montserrat";
+    padding: 10px 20px;
+    font-weight: 600;
+}
+.btn-slide-action:hover {
+    background: #f7af2a;
+    color: #fff;
+}
+.btn-filter {
+    min-width: 85px;
+    text-align: center;
+    padding: 0.75rem 2rem;
+}
+.panel-heading {
+    background: #000!important;
+    color: #fff!important;
+    font-size: 18px;
+    font-weight: 600;
+}
+.table-striped > tbody > tr:nth-child(2n+0) > td, .table-striped > tbody > tr:nth-child(2n+1) > th {
+    background-color: #fff;
+ }
+ .table-striped thead tr {
+    background: #fff;
+}
+.mw-60 {
+    max-width: 60%;
+}
+.btn-try {
+    padding: 33px;
+    font-size: 31px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    background: #f8ac25!important;
+    border-color: #f8ac25!important;
+}
+.btn-try:hover {
+    background: transparent!important;
+    border-color: #fff!important;
+}
+.count-wrapper {
+    width: 100%;
+}
+.count-wrapper h4 {
+    font-size: 28px;
+    margin-top: 40px;
+}
+#action-text-timer .bg-wrap {
+    background-color: #e00202;
+}
+ul.trackers {
+    display: inline-block;
+}
+.trackers .track-item {
+    display: inline-block;
+}
+.bet-tracker-wrapper {
+    width: 100%;
+    padding: 27px 0;
+}
+.track-item span {
+    display: block;
+    color: #fff;
+}
+.track-item span i {
+    background: #fff;
+    border-radius: 50%;
+}
+.green {
+    color: #14920c!important;
+}
+.red {
+    color: red!important;
+}
+span.track-date {
+    font-size: 20px;
+    font-weight: 600;
+}
+li.track-item {
+    margin: 0 20px;
+}
+span.track-icon {
+    font-size: 50px;
+}
+.bet-tracker-wrapper h4 {
+    color: #fff;
+    font-size: 55px;
+}
+
+.dark h2.light, .light h2, .dark .light h2, h2.light {
+    font-family: 'Montserrat';
+    font-size: 50px;
+    font-weight: 300;
+    font-style: normal;
+    color: #000;
+}
+.dark h4.light, .light h4, .dark .light h4, h4.light {
+    font-family: 'Montserrat';
+    font-size: 18px;
+    font-weight: 400;
+    font-style: normal;
+    color: #000;
+}
+.dark h3.light, .light h3, .dark .light h3, h3.light {
+    font-family: 'Montserrat';
+    font-size: 35px;
+    font-weight: 300;
+    font-style: normal;
+    color: #000;
+}
+.dark .light, .light, .dark .light, .light {
+    font-family: 'OpenSans';
+    font-size: 14px;
+    line-height: 1.5;
+    color: #000;
+}
+.text-white{
+    color: #fff;
+}
+.bet-tracker-wrapper h4 {
+    font-size: 45px;
+    margin-bottom: 36px;
+    font-weight: 600;
+}
+.bet-shop-title h2 {
+    text-align: center;
+    font-weight: 800;
+}
+.bet-shop-sub-title h4 {
+    font-size: 26px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+ul.shop-list {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    grid-gap: 10px;
+}
+.shop-item {
+    display: inline-block;
+}
+.shop-item a {
+    text-decoration: none!important;
+    background: #000;
+    color: #fff;
+    padding: 53px;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+.free-bet-shop .shop-item a {
+    text-decoration: none!important;
+    background: #047b6b;
+    color: #fff;
+    padding: 53px;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+.premium-bet-shop .shop-item a {
+    text-decoration: none!important;
+    background: #3f095a;
+    color: #fff;
+    padding: 53px;
+    display: inline-block;
+    margin: 0 5px;
+    font-size: 16px;
+    font-family: "Montserrat";
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+}
+.shop-item a:hover {
+    text-decoration: none!important;
+    background:#f7ae29;
+    color: #fff;
+   
+}
+.free-bet-shop {
+    margin: auto;
+    display: block;
+    width: 87%;
+}
+.premium-bet-shop {
+    margin: auto;
+    display: block;
+    width: 87%;
+}
+.light .bg-wrap.dark, .dark .bg-wrap, .light .dark .bg-wrap, .bg-wrap.dark, .light .bg-default.dark, .dark .bg-default, .light .dark .bg-default, .bg-default.dark {
+    background-color: #000000;
+}
+.rollover-bet-wrapper {
+    background: #f7ae29;
+    min-height: 532px;
+}
+.expert-rollover-title h2 {
+    font-size: 52px!important;
+    font-weight: 500!important;
+    margin-bottom: 20px;
+}
+.expert-content {
+    font-size: 30px;
+    max-width: 76%;
+    margin-bottom: 30px;
+}
+.btn-primary.btn-rollover {
+    padding: 36px 50px;
+    font-size: 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #000!important;
+    border-color: #000!important;
+}
+.btn-rollover:hover {
+    background: transparent!important;
+    border-color: #fff!important;
+    color: #000!important
+}
+.btn-expert-cta {
+    padding: 36px 50px;
+    font-size: 22px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background: #f7ae29!important;
+    border-color: #000!important;
+    color: #000!important;
+    text-align: left;
+}
+.btn-expert-cta:hover {
+    background: transparent!important;
+    border-color: #fff!important;
+    color: #fff!important;
+}
+.expert-zone-wrapper {
+    padding-left: 50px;
+}
+.pricing-item {
+    padding: 0 5px;
+}
+.price-title {
+    font-size: 18px!important;
+    font-weight: 600!important;
+    margin-top: 18px;
+    margin-bottom: 0!important;
+}
+.btn-group>.btn+.dropdown-toggle {
+    padding-right: 8px;
+    padding-left: 8px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+}
+.pricing-item .content-box {
+    box-shadow: 1px 1px 1px 1px #00000030;
+    padding-bottom: 30px;
+}
+#price-4col-2 .content-box {
+    min-height: 520px;
+}
+.content-box i {
+    margin-right: 10px;
+}
+.feedback-title {
+    width: 100%;
+    margin-bottom: 40px;
+    position: relative;
+}
+#testimonial-single-5 .bg {
+    background: url(../img/feedback.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+   
+}
+.primary-color-fade{
+    background: #f7ae29d4;
+}
+.feedback-user, .feedback-location {
+    font-weight: 600;
+}
+.footer-logo {
+    width: 44%;
+}
+.contact-item {
+    display: block;
+    margin-bottom: 10px;
+}
+.socials-footer, .socials-footer li {
+    display: inline-block;
+}
+.socials-footer li a i {
+    font-size: 25px;
+    
+}
+.socials-footer li a i.fa-facebook-f {
+    background: #4267b2;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: #fff
+
+}
+.socials-footer li a i.fa-twitter {
+    background: #1DA1F2;
+    padding: 10px 13.97px;
+    border-radius: 5px;
+    color: #fff;
+}
+.socials-footer li a i.fa-instagram {
+    background: #d92c7d;
+    padding: 10px 13.97px;
+    border-radius: 5px;
+    color: #fff;
+}
+.socials-footer li a i.fa-instagram {
+    background: #d92c7d;
+    padding: 10px 15.5px;
+    border-radius: 5px;
+    color: #fff;
+}
+.socials-footer li a i.fa-telegram-plane {
+    background: #34abe0;
+    padding: 10px 15.5px;
+    border-radius: 5px;
+    color: #fff;
+}
+#middlefooter h4 {
+    font-size: 22px;
+    font-weight: 600;
+}
+#middlefooter .container {
+    max-width: 576px;
+}
+
+.last-footer, .last-footer h4 {
+    font-size: 10px;
+}
+#footer-text-logo .container {
+    max-width: 655px;
+}
+.copyright.text-center {
+    padding: 50px 0 0;
+    font-size: 12px;
+}
+.nav-item .nav-link {
+    font-size: 15px;
+    color: #000!important;
+}
+.btn-login {
+    padding: 8px 20px;
+    background: #faa61a!important;
+    border-color: #f7af29!important;
+    font-size: 13px!important;
+}
+.btn-register {
+    padding: 8px 20px;
+    background: #000!important;
+    border-color: #000!important;
+    font-size: 13px!important;
+}
+nav#nav-logo-menu-btn-2 {
+    margin: 0;
+    padding: 10px 0;
+}
+.triangle-topleft-primary {
+    width: 0;
+    height: 0;
+    border-top: 40px solid #F5BE40;
+    border-right: 292px solid transparent;
+}
+.triangle-topleft-secondary {
+    width: 0;
+    height: 0;
+    border-top: 40px solid #000;
+    border-right: 292px solid transparent;
+}
+.price-header-primary {
+    background: #f5be40;
+    padding: 20px;
+}
+.price-header-secondary {
+    background: #000;
+    padding: 20px;
+}
+.btn-primary {
+    background: #f5be40!important;
+    border-color: #f5be40!important;
+}
+.btn-secondary {
+    background: #000!important;
+    border-color: #000!important;
+}
+.slide-cont-header h4 {
+    color: #fff;
+    font-family: "Montserrat";
+    font-weight: 600;
+    font-size: 18px;
+}
+.league-list {
+    column-count: 4;
+}
+.page-header {
+    margin: 0;
+    padding: 30px 0;
+    background: #faa71b;
+    border-bottom: 2px solid #000;
+}
+.page-header h3 {
+    font-size: 33px;
+    font-weight: 600;
+    color: #fff;
+    text-transform: uppercase;
+}
+.league-header h4 {
+    font-weight: 600;
+    margin-bottom: 9px;
+}
+.leagues-items {
+    border-bottom: 1px dotted #0000002e;
+    margin-bottom: 20px;
+}
+.time-nav {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+}
+.time-nav-item {
+    background: #faa71b;
+    padding: 10px 30px;
+    border-radius: 5px!important;
+}
+.time-nav-item:hover {
+    background: #000;
+    color: #fff;
+}
+.time-nav-item.active {
+    background: #000!important;
+    color: #fff!important;
+}
+.time-nav-item.active:hover {
+    background: #faa71b;
+    color: #000;
+}
+
+span.no-tips {
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    color: red;
+}
+.next-page {
+    clear: both;
+    /* width: 18%; */
+    margin: auto;
+    text-align: center;
+}
+span.duration-label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+}
+.duration-wrapper {
+    padding: 0 40px 20px 40px;
+}
+.duration_select {
+    height: 43px;
+}
+.temp-mt69{
+    margin-top: 69px;
+}
+ul.payment-lists {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 25% 25% 25% auto;
+    grid-gap: 10px;
+}
+li.payment-item {
+    background: #000;
+    color: #ffff;
+    text-align: center;
+    padding: 10px;
+    font-size: 15px;
+    font-weight: 600;
+}
+h4.payment-sub-title {
+    font-size: 14px;
+    font-style: italic;
+    padding: 10px;
+    text-align: right;
+}
+h3.payment-section-title {
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 50px;
+}
+h4.payment-plan-title {
+    text-align: center;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+.payment-item-main {
+    margin: auto;
+    width: 82%;
+}
+.disclaimer-wrapper {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+.country-selection-wrapper {
+    width: 50%;
+    margin: auto;
+}
+select.form-control {
+    height: 50px;
+}
+.plan-price {
+    font-size: 30px;
+    text-align: center;
+    font-weight: 600;
+}
+.btn-paynow {
+    text-align: center;
+    display: block;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 100%;
+}
+.betstore-sub-head {
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+/* FAQ */
+/* body {
+    font-size: 62.5%;
+    background: #dadada;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 2;
+    padding: 5em;
+  } */
+  
+  .accordion {
+    font-size: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    border-radius: 5px;
+  }
+  
+  .accordion-header,
+  .accordion-body {
+    background: white;
+  }
+  
+  /* .accordion-header {
+    padding: 1.5em 1.5em;
+    background: #3F51B5;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: .1em;
+    transition: all .3s;
+  } */
+  .accordion-header {
+    padding: 23px;
+    color: #000;
+    cursor: pointer;
+    font-size: 15px;
+    letter-spacing: .1em;
+    transition: all .3s;
+    background: #fff;
+    box-shadow: 1px 1px 1px 1px #0000003b;
+    margin-bottom: 10px;
+    border-radius: 2px;
+    font-weight: 600;
+}
+  
+  /* .accordion-header:hover {
+    background: #2D3D99;
+    position: relative;
+    z-index: 5;
+  } */
+  
+  .accordion-body {
+    background: #f7ae29;
+    color: #3f3c3c;
+    display: none;
+    margin-bottom: 10px;
+}
+  
+  .accordion-body__contents {
+    padding: 1.5em 1.5em;
+    font-size: 14px;
+  }
+  
+  .accordion__item.active:last-child .accordion-header {
+    border-radius: none;
+  }
+  
+  .accordion:first-child > .accordion__item > .accordion-header {
+    border-bottom: 1px solid transparent;
+  }
+  
+  .accordion__item > .accordion-header:after {
+    content: "\f3d0";
+    font-family: IonIcons;
+    font-size: 1.2em;
+    float: right;
+    position: relative;
+    top: -2px;
+    transition: .3s all;
+    transform: rotate(0deg);
+  }
+  
+  .accordion__item.active > .accordion-header:after {
+    transform: rotate(-180deg);
+  }
+  
+  .accordion__item.active .accordion-header {
+    background: #f7ae29;
+    margin-bottom: 0;
+}
+  .accordion__item .accordion__item .accordion-header {
+    background: #f1f1f1;
+    color: black;
+  }
+  h4.terms-headings {
+    font-weight: 600;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#error-page h4 {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 40px;
+}
+#error-page p {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.error-action a {
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 20px 50px;
+}
+.mobile-user-front {
+    position: absolute;
+    top: -17px;
+    left: 40px;
+}
+img.footer-patyment {
+    width: 100%;
+    margin-top: -5px;
+}
+  @media screen and (max-width: 1000px) {
+    /* body {
+      padding: 1em;
+    }
+     */
+    .accordion {
+      width: 100%;
+    }
+  }
+  
+  
+@media(max-width:768px){
+    .slide-content {
+        position: static;
+    }
+    .table-responsive {
+        display: block;
+    }
+    .container {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+    .slide-content td {
+        font-size: 8px;
+    }
+    .action-container {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+    .btn-slide-action {
+        background: #000;
+        color: #fff;
+        font-family: "Montserrat";
+        padding: 10px 20px;
+        font-weight: 600;
+        display: block;
+        float: none;
+        width: 100%;
+        margin-bottom: 10px!important;
+    }
+    .action-container {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .mw-60 {
+        max-width: 100%;
+    }
+    .count-title h2 {
+        font-size: 35px;
+    }
+    ul.shop-list {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-gap: 10px;
+    }
+    .shop-item a {
+        text-decoration: none!important;
+        background: #000;
+        color: #fff;
+        padding: 20px;
+        display: inline-block;
+        margin: 0 5px;
+        font-size: 12px;
+        font-family: "Montserrat";
+        font-weight: 600;
+        width: 100%;
+        text-align: center;
+        min-height: 76px;
+        vertical-align: middle;
+    }
+    .expert-zone-wrapper {
+        padding: 15px;
+    }
+    .expert-rollover-title h2 {
+        font-size: 43px!important;
+        font-weight: 500!important;
+        margin-bottom: 20px;
+    }
+    .btn-expert-cta {
+        padding: 20px 19px;
+        font-size: 22px;
+        font-weight: 600;
+        text-transform: uppercase;
+        background: #f7ae29!important;
+        border-color: #000!important;
+        color: #000!important;
+        text-align: left;
+    }
+    .rollover-bet-wrapper {
+        background: #f7ae29;
+        min-height: unset;
+        padding-left: 55px;
+    }
+    section#price-4col-2 {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .btn + .btn {
+        margin: 0;
+    }
+    .slide-content {
+        background: #000;
+        margin-top: -8px;
+        padding-top: 25px;
+        margin-bottom: 30px;
+    }
+    .bet-tracker-wrapper h4 {
+        font-size: 29px;
+    }
+    span.track-date {
+        font-size: 15px;
+    }
+    span.track-icon {
+        font-size: 30px;
+    }
+    li.track-item {
+        margin: 0 10px;
+    }
+    .free-bet-shop .shop-item a {
+        padding: 20px;
+        font-size: 14px;
+    }
+    .premium-bet-shop .shop-item a {
+        padding: 20px;
+        font-size: 14px;
+    }
+    ul.shop-list {
+        grid-template-columns: 50% 50%;
+    }
+    .expert-content {
+        font-size: 20px;
+    }
+    .faq-image img {
+        display: block;
+        margin: auto;
+        width: 100%;
+    }
+    .navbar-collapse.main-menu-collapse {
+        background: #faa71b;
+        margin-bottom: -11px;
+    }
+    ul.navbar-nav {
+        padding: 0 20px;
+    }
+    .mega-menu-container.shadow.bg-default {
+        background: #f8a51b;
+    }
+    .light .navbar-nav a {
+        color: #333;
+    }
+    .mobile-authentication a {
+        font-size: 31px;
+        text-align: right!important;
+        display: block;
+    }
+    .desktop-authentication {
+        display: none!important;
+    }
+    .mobile-authentication {
+        position: relative;
+        right: -30px;
+    }
+    .league-list {
+        column-count: 1;
+    }
+    .time-nav-item {
+        display: block;
+        margin-bottom: 5px!important;
+        width: 100%;
+    }
+    .page-header {
+        padding: 10px 0;
+    }
+    .page-header h3 {
+        font-size: 25px;
+    }
+}
+
