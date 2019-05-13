@@ -1,0 +1,30 @@
+
+#action-text-btn .bg {
+    background-image: url('../img/trynow.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity:0.1;
+}
+#action-text-timer .bg-wrap {
+    background-color: #9a2b2b;
+}
+
+
+#action-text-btn--0 .bg {
+    background-image: url('../images/bg-6.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity:0.1;
+}
+#action-text-btn--1 .bg {
+    background-image: url('../images/bg-6.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    opacity:0.1;
+}
+#price-4col .bg-wrap {
+    background-color: #f4f5f6;
+}

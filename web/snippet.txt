@@ -1,0 +1,10 @@
+httpRequest = new XMLHttpRequest();
+
+// Specify a function to handle the response.
+
+httpRequest.onreadystatechange = function() {
+    // Process the AJAX response in here.
+}
+
+// Make the AJAX request
+httpRequest.open('GET', 'http://prajjwal.com/profile.json', true);
