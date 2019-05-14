@@ -18,12 +18,11 @@ class Users extends CI_Model {
         try {
             $this->load->library("utilities");
         
-            $token = md5($UserData['Password']);
-            $UserData['Password'] = hash("sha512", $token . $UserData['Password']);
-            $UserData["Token"] = $token;
+            $hash = md5($UserData['Password']);
+            $UserData['Password'] = hash("sha512", $hash . $UserData['Password']);
+            $UserData["Hash"] = $hash;
+            $userdata["IsActive"] = 1;
             $UserData["DateCreated"] = $this->utilities->DbTimeFormat();
-            $UserData["AccountType"] = "Free";
-            $UserData["IdHash"] = $this->utilities->GenerateGUID();
             $dbOptions = array(
                 "table_name" => $this->TableName,
                 "process_data" => (object) $UserData,
@@ -48,14 +47,11 @@ class Users extends CI_Model {
                 "EmailAddress" => (isset($UserData->EmailAddress) && $UserData->EmailAddress != $UserDB->EmailAddress)? $UserData->EmailAddress : $UserDB->EmailAddress,
                 "PhoneNumber" => (isset($UserData->PhoneNumber) && $UserData->PhoneNumber != $UserDB->PhoneNumber)? $UserData->PhoneNumber : $UserDB->PhoneNumber,
                 "Country" => (isset($UserData->Country) && $UserData->Country != $UserDB->Country)? $UserData->Country : $UserDB->Country,
-                "State" => (isset($UserData->State) && $UserData->State != $UserDB->State)? $UserData->State : $UserDB->State,
-                "AccountType" => (isset($UserData->AccountType) && $UserData->AccountType != $UserDB->AccountType)? $UserData->AccountType : $UserDB->AccountType,
-                "IsPremium" => (isset($UserData->IsPremium) && $UserData->IsPremium != $UserDB->IsPremium)? $UserData->IsPremium : $UserDB->IsPremium,
-                "IsPro" => (isset($UserData->IsPro) && $UserData->IsPro != $UserDB->IsPro)? $UserData->IsPro : $UserDB->IsPro,
-                "IsRollOver" => (isset($UserData->IsRollOver) && $UserData->IsRollOver != $UserDB->IsRollOver)? $UserData->IsRollOver : $UserDB->IsRollOver,
-                "IsWeekend20" => (isset($UserData->IsWeekend20) && $UserData->IsWeekend20 != $UserDB->IsWeekend20)? $UserData->IsWeekend20 : $UserDB->IsWeekend20,
+                "UserType" => (isset($UserData->UserType) && $UserData->UserType != $UserDB->UserType)? $UserData->UserType : $UserDB->UserType,
+                "IsActive" => (isset($UserData->IsActive) && $UserData->IsActive != $UserDB->IsActive)? $UserData->IsActive : $UserDB->IsActive,
                 "DateModified" => $this->utilities->DbTimeFormat(),
-                "ProfileImage" => (isset($UserData->ProfileImage) && $UserData->ProfileImage != $UserDB->ProfileImage)? $UserData->ProfileImage : $UserDB->ProfileImage
+                "ProfileImage" => (isset($UserData->ProfileImage) && $UserData->ProfileImage != $UserDB->ProfileImage)? $UserData->ProfileImage : $UserDB->ProfileImage,
+                 "Gender" => (isset($UserData->Gender) && $UserData->Gender != $UserDB->Gender)? $UserData->Gender : $UserDB->Gender
             );
             $dbOptions = array(
                 "table_name" => $this->TableName,
@@ -94,47 +90,8 @@ class Users extends CI_Model {
         return null;
         
     }
-    public function GetByHash(string $UserHash): stdClass
-    {
-        try {
-            $dbOptions = array(
-                "table_name" => $this->TableName,
-                "targets" => (object) array("IdHash" => $UserHash)
-            );
-            $dbResult = $this->connectDb->select_data((object) $dbOptions);
-            if(!empty($dbResult))
-                return $dbResult[0];
-    
-            
-        } catch (\Throwable $th) {
-            
-            log_message('error', $th->getMessage());
-        
-        }
-        return null;
-        
-    }
-    public function GetUserIdByHash(string $UserHash): stdClass
-    {
-
-        try {
-            $dbOptions = array(
-                "table_name" => $this->TableName,
-                "targets" => (object) array("IdHash" => $UserHash)
-            );
-            $dbResult = $this->connectDb->select_data((object) $dbOptions);
-            if(!empty($dbResult))
-                return $dbResult[0]->Id;
-    
-            
-        } catch (\Throwable $th) {
-            
-            log_message('error', $th->getMessage());
-        
-        }
-        return (object) array();
-        
-    }
+   
+   
     public function GetByEmail(string $EmailAddress): stdClass 
     {
         try {
@@ -158,11 +115,11 @@ class Users extends CI_Model {
     public function ChangePassword(string $Password, int $UserId): int
     {
         try {
-            $token = md5($Password);
-        $Password = hash("sha512", $token . $Password);
+            $hash = md5($Password);
+        $Password = hash("sha512", $hash . $Password);
         $UserUpdate = array(
             "Password" => $Password,
-            "Token" => $token
+            "Hash" => $hash
         );
         $dbOptions = array(
             "table_name" => $this->TableName,
@@ -183,8 +140,8 @@ class Users extends CI_Model {
     {
         try {
             $userdata =  $this->Get($UserId);
-            $token = md5($Password);
-            $enteredPassword = hash("sha512", $token . $Password);
+            $hash = md5($Password);
+            $enteredPassword = hash("sha512", $hash . $Password);
             if ($userdata->Password == $enteredPassword) {
                 return true;
             }
@@ -197,153 +154,7 @@ class Users extends CI_Model {
         return false;
         
     }
-    public function ActivatePremium(int $UserId): int
-    {
-        try {
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("AccountType" => 'Paid',"IsPremium" => 1, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
-    public function DeactivatePremium(int $UserId): int
-    {
-        try {
-           
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("IsPremium" => 0, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
-    public function ActivatePro(int $UserId): int
-    {
-        try {
-           
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("AccountType" => 'Paid',"IsPro" => 1, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
-    public function DeactivatePro(int $UserId): int
-    {
-        try {
-           
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("IsPro" => 0, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
-    public function ActivateRollover(int $UserId): int
-    {
-        try {
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("AccountType" => 'Paid',"IsRollOver" => 1, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
-    public function DeactivateRollover(int $UserId): int
-    {
-        try {
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("IsRollOver" => 0, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
-    public function ActivateWeekend20(int $UserId): int
-    {
-        try {
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("AccountType" => 'Paid',"IsWeekend20" => 1, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
-    public function DeactivateWeekend20(int $UserId): int
-    {
-        try {
-        
-        $dbOptions = array(
-            "table_name" => $this->TableName,
-            "process_data" => (object) array("IsWeekend20" => 0, "DateModified" => $this->utilities->DbTimeFormat()),
-            "targets" => (object) array("Id" => $UserId)
-        );
-        $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-        if(!empty($DbResponse))
-            return 1;
-        } catch (\Throwable $th) {
-            log_message('error', $th->getMessage()); 
-            return -1;
-        }
-        return 0;
-    }
+    
     public function ChangeAccountType(string $Type, int $UserId): int
     {
         try {

@@ -75,11 +75,11 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'port' => 3307,
-	'username' => 'root',
-	'password' => 'admins',
-	'database' => '90minbet',
+	'hostname' => 'remotemysql.com',
+	'port' => 3306,
+	'username' => 'ITC8EdqIyY',
+	'password' => 'a6FOjjzpb0',
+	'database' => 'ITC8EdqIyY',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
