@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html class="hide-sidebar ls-bottom-footer" lang="en">
+    
+
+<head id="header">
+  <script src="../assets/js/vendor/all.js"></script>
+  <script src="../assets/js/userresources.js"></script>
+  
+  <title>Signup</title>
+
+</style>
+</head>
+
+
+<body>
+        <div class="all">
+         <div><center><h2>sign up and get started</h2></center></div><hr>
+     
+         <form  class="sign-up-form"  id="RegisterForm">
+           <label><b>Full Name</b></label><br>
+           <input type="text" class="inputvalues" name="FullName" placeholder="Full name"/><br><br>
+     
+           
+     
+           <label><b>Email</b></label><br>
+           <input type="text" class="inputbalues" name="EmailAddress" placeholder="email"/><br><br>
+     
+           <label><b>password</b></label><br>
+           <input type="password" class="inputvalues" name="Password" id="Password" placeholder="Enter your password"/><br><br>
+     
+           <label><b>confirm password</b></label><br>
+           <input type="password" class="inputvalues" id="ConfirmPassword" placeholder="confirm password"/><br><br>
+     
+           <label><b>country</b></label><br>
+           <input type="text" class="inputvalues" name="country" placeholder="Type your country"/><br><br>
+           <label><b>Phone number</b></label7><br>
+           <input type="number"  class="inputvalues" name="PhoneNumber" placeholder="Type your phone nunmber"><br><br>
+           <label><b>Gender</b></label><br>
+           <select name="Gender" class="choosevalue">
+             <option value="male">Male</option>
+             <option value="female">Female</option>
+           </select><br><br>
+         
+                     <div class="checkbox">
+                       
+            <input class="checkbox1" type="checkbox" id="agree"/>* I Agree with <a href="#">Terms &amp; Conditions!</a>
+                      
+                     </div>
+         
+               <div class="text-center">
+                     <button type="submit" class="btn btn-primary">Create an Account</button>
+               </div>
+         </form>
+         
+     
+     
+        </div>
+     
+     
+       
+       <footer id="footer" class="footer">
+         
+       </footer>
+       <script src="../assets/js/app/app.js"></script>
+  <script src="../assets/js/utilities.js"></script>
+  <script src="../assets/js/endpoints.js"></script>
+       <!-- // Footer -->
+       <!-- Inline Script for colors and config objects; used by various external scripts; -->
+     </body>
+     <script>
+
+            $('#RegisterForm').on('submit', function (e) {
+                      e.preventDefault();
+                      if ($('#Password').val() != $('#ConfirmPassword').val()) {
+                        alert("password mismatch");
+                        return;
+                      }
+                      var formData = new FormData($('form#RegisterForm')[0]);
+                      // formData.append("actions", "writer_request");
+                      AjaxInit(endPoints.Register, formData);
+            
+            
+                    })
+            
+            </script>
+
+</html>
