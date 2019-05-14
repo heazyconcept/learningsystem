@@ -15,7 +15,7 @@
    <div class="all">
     <div><center><h2>sign up and get started</h2></center></div><hr>
 
-    <form action="index.php" class="sign-up-form" method="POST">
+    <form action="index.php" class="sign-up-form" method="POST" id="register form">
       <label><b>First Name</b></label><br>
       <input type="text" class="inputvalues" placeholder="first name"/><br><br>
 
@@ -66,3 +66,21 @@
 </body>
 </html>
   
+<script>
+
+$('#RegisterForm').on('submit', function (e) {
+          e.preventDefault();
+          $('body').loading('start');
+          if ($('#Password').val() != $('#PasswordConfirm').val()) {
+            notificationMessage("info", "Password mismatch!", "kindly check your password");
+            $('body').loading('stop');
+            return;
+          }
+          var formData = new FormData($('form#RegisterForm')[0]);
+          // formData.append("actions", "writer_request");
+          AjaxInit("<?php echo base_url('authAjax/Register') ?>", formData);
+
+
+        })
+
+</script>
