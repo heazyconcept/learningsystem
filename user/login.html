@@ -3,9 +3,21 @@
     
 
 <head id="header">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <script src="../assets/js/vendor/all.js"></script>
   <script src="../assets/js/userresources.js"></script>
+  <script src="../assets/js/app/app.js"></script>
+  <script src="../assets/js/utilities.js"></script>
+  <script src="../assets/js/endpoints.js"></script>
+  <title>Login</title>
 
+</style>
 </head>
 
 
@@ -17,11 +29,11 @@
       <div class="lock-container">
         <div class="panel panel-default text-center paper-shadow" data-z="0.5">
           <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
-          <img src="images/people/110/guy-5.jpg" class="img-circle width-80">
+          <img src="login-1.png" class="img-circle width-80">
           <div class="panel-body">
             <div class="form-group">
               <div class="form-control-material">
-                <input class="form-control" id="username" type="text" placeholder="Username">
+                <input class="form-control" id="username" name="Username" type="text" placeholder="Username">
                 <label for="username">Username</label>
               </div>
             </div>
@@ -34,7 +46,8 @@
 
             <a href="website-student-dashboard.html" class="btn btn-primary">Login <i class="fa fa-fw fa-unlock-alt"></i></a>
             <a href="#" class="forgot-password">Forgot password?</a>
-            <a href="sign-up.html" class="link-text-color">Create account</a>
+
+            <div> Not Registered &nbsp;&nbsp; <a href="sign-up.html" class="text-warning">Create account here</a></div>
           </div>
         </div>
       </div>
@@ -47,9 +60,16 @@
     
   </footer>
   
-  <script src="../assets/js/app/app.js"></script>
-  <script src="../assets/js/utilities.js"></script>
-  <script src="../assets/js/endpoints.js"></script>
+  
+  <script>
+    $.post(endPoints.Register, data)
+    .done(function (response) {
+      
+    })
+    .fail(function (error) {
+      s
+    })
+  </script>
 
 </body>
 
