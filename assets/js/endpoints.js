@@ -1,4 +1,5 @@
+var baseURL = "http://localhost/";
 var endPoints = {
-    Register: "http://localhost/lms/api/Account/Register",
+    Register: baseURL + "lms/api/Account/Register",
     Login : "" 
 };
