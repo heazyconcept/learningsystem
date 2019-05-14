@@ -1,4 +1,4 @@
 var endPoints = {
-    Register: "http://localhost/lms/api/Register",
-    Login: "" 
+    Register: "http://localhost/lms/user/sign-up.html",
+    Login : "" 
 };
