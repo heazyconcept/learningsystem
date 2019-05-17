@@ -68,11 +68,11 @@
 
             var JSONObject = JSON.parse(response);
 
-            var JSONObject ={ StatusMessage:"", StatusCode: "",};
-
-            if ($(StatusCode==00)) 
+            
+            if (JSONObject.StatusCode=="00"){
           localStorage.setItem('sessionId', JSONObject.StatusMessage);
-           alert("JSONObject.StatusMessage") 
+           alert(JSONObject.StatusMessage)} 
+           else{alert(JSONObject.StatusMessage)}
            })
            
            .fail(function (error) { 
