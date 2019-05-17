@@ -63,11 +63,21 @@
            LoginData.Password = $("#password").val();
            $.post(endPoints.Login, LoginData)
            .done(function (response) {
-               
+
+          
+
+            var JSONObject = JSON.parse(response);
+
+            var JSONObject ={ StatusMessage:"", StatusCode: "",};
+
+            if ($(StatusCode==00)) 
+          localStorage.setItem('sessionId', JSONObject.StatusMessage);
+           alert("JSONObject.StatusMessage") 
            })
+           
            .fail(function (error) { 
                console.log(error);
-               alert("internal server error occurred");
+               
                
             })
             
