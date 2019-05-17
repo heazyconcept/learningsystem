@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html class="hide-sidebar ls-bottom-footer" lang="en">
+    
+
+<head id="header">
+  <script src="../assets/js/vendor/all.js"></script>
+  <script src="../assets/js/userresources.js"></script>
+  
+  <title>Signup</title>
+
+</style>
+</head>
+
+
+<body>
+  <div class="container">
+        <div class="all">
+         <div><center><h2>sign up and get started</h2></center></div><hr>
+         
+         <form>
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                        <label><b>Full Name</b></label>
+                    <input type="text" class="form-control" name="FullName" placeholder="Full name">
+                  </div>
+                  <div class="form-group col-md-6">
+                        <label><b>Email</b></label>
+                    <input type="Email" class="form-control"  name="EmailAddress" placeholder="Enter Your Email">
+                  </div>
+                </div>
+
+                        <div class="form-row">
+                          <div class="form-group col-md-6">
+                                <label><b>password</b></label>
+                            <input type="password" class="form-control" name="Password" placeholder="Enter your password">
+                          </div>
+                          <div class="form-group col-md-6">
+                                <label><b>confirm password</b></label>
+                            <input type="password" class="form-control"  id="ConfirmPassword" placeholder="confirm password">
+                          </div>
+                        </div>
+
+                        <div class="form-row">
+                                <div class="form-group col-md-6">
+                                        <label><b>country</b></label>
+                                  <input type="text" class="form-control" name="country" placeholder="country">
+                                </div>
+                                <div class="form-group col-md-6">
+                                        <label><b>Phone number</b></label>
+                                  <input type="number" class="form-control" name="PhoneNumber" placeholder="Your phone number">
+                                </div>
+                              </div>
+
+                              <div class="form-group">
+                                <div class="form-row">
+                                    <label class="text-center"><b>Gender</b></label>
+                                    <select name="Gender" class="form-control">
+                                            <option>male</option>
+                                            <option>female</option>
+                                          </div>
+                              </div>
+
+                              <div class="form-group">
+                                    <div class="form-check">
+                                      <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                                      <label class="form-check-label" for="invalidCheck">
+                                        Agree to<a href="#">Terms &amp; Conditions!</a>
+                                      </label>
+                                      <div class="invalid-feedback">
+                                        You must agree before submitting.
+                                      </div>
+                                    </div>
+                                  </div>
+
+                                  <div class="form-group">
+                                      <div class="row">
+        <button class="btn btn-primary" type="submit" name="submit" id="saveform">Create account</button>
+</div>
+                                  </div>
+                                  
+              </form>
+              </div>
+            </div>
+     
+       
+       <footer id="footer" class="footer">
+         
+       </footer>
+       <script src="../assets/js/app/app.js"></script>
+  <script src="../assets/js/utilities.js"></script>
+  <script src="../assets/js/endpoints.js"></script>
+  <script src="../assets/js/localstorage.js"></script>
+       <!-- // Footer -->
+       <!-- Inline Script for colors and config objects; used by various external scripts; -->
+     </body>
+     <script>
+
+            $('#RegisterForm').on('submit', function (e) {
+                      e.preventDefault();
+                      if ($('#Password').val() != $('#ConfirmPassword').val()) {
+                        alert("password mismatch");
+                        return;
+                      }
+                      var formData = new FormData($('form#RegisterForm')[0]);
+                      // formData.append("actions", "writer_request");
+                      AjaxInit(endPoints.Register, formData);
+            
+            
+                    })
+            
+            </script>
+
+
+
+</html>

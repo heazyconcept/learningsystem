@@ -5,7 +5,10 @@
 <head id="header">
   <script src="../assets/js/vendor/all.js"></script>
   <script src="../assets/js/userresources.js"></script>
+  
+  <title>Login</title>
 
+</style>
 </head>
 
 
@@ -17,12 +20,12 @@
       <div class="lock-container">
         <div class="panel panel-default text-center paper-shadow" data-z="0.5">
           <h1 class="text-display-1 text-center margin-bottom-none">Sign In</h1>
-          <img src="images/people/110/guy-5.jpg" class="img-circle width-80">
+          <img src="login-1.png" class="img-circle width-80">
           <div class="panel-body">
             <div class="form-group">
               <div class="form-control-material">
                 <input class="form-control" id="EmailAddress" type="email" placeholder="EmailAddress">
-                <label for="username">Username</label>
+                <label for="username">EmailAddress</label>
               </div>
             </div>
             <div class="form-group">
@@ -34,7 +37,8 @@
 
             <button type="button" class="btn btn-primary btn-login">Login <i class="fa fa-fw fa-unlock-alt"></i></button>
             <a href="#" class="forgot-password">Forgot password?</a>
-            <a href="sign-up.html" class="link-text-color">Create account</a>
+
+            <div> Not Registered &nbsp;&nbsp; <a href="sign-up.html" class="text-warning">Create account here</a></div>
           </div>
         </div>
       </div>
@@ -50,7 +54,7 @@
   <script src="../assets/js/app/app.js"></script>
   <script src="../assets/js/utilities.js"></script>
   <script src="../assets/js/endpoints.js"></script>
-  
+</body>
 <script>
     $(document).ready(function () {
         LoginData = {EmailAddress: "", Password: ""};
@@ -59,17 +63,27 @@
            LoginData.Password = $("#password").val();
            $.post(endPoints.Login, LoginData)
            .done(function (response) {
-               
+
+          
+
+            var JSONObject = JSON.parse(response);
+
+            
+            if (JSONObject.StatusCode=="00"){
+          localStorage.setItem('sessionId', JSONObject.StatusMessage);
+           alert(JSONObject.StatusMessage)} 
+           else{alert(JSONObject.StatusMessage)}
            })
+           
            .fail(function (error) { 
                console.log(error);
-               alert("internal server error occurred");
+               
                
             })
             
         });
     });
 </script>
-</body>
+
 
 </html>
