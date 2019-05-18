@@ -54,36 +54,31 @@
   <script src="../assets/js/app/app.js"></script>
   <script src="../assets/js/utilities.js"></script>
   <script src="../assets/js/endpoints.js"></script>
+  <script>
+      $(document).ready(function () {
+          LoginData = {EmailAddress: "", Password: ""};
+          $('.btn-login').click(function () { 
+             LoginData.EmailAddress = $("#EmailAddress").val();
+             LoginData.Password = $("#password").val();
+              $.post(endPoints.Login, LoginData)
+             .done(function (response) {
+              var JSONObject = JSON.parse(response);
+              if (JSONObject.StatusCode=="00"){
+            localStorage.setItem('sessionId', JSONObject.StatusMessage);
+            window.location.href =url.dashboard}
+            else alert(JSONObject.StatusMessage)
+             })
+             .fail(function (error) { 
+                 console.log(error);
+                 
+                 
+              })
+              
+          });
+      });
+  </script>
+  
 </body>
-<script>
-    $(document).ready(function () {
-        LoginData = {EmailAddress: "", Password: ""};
-        $('.btn-login').click(function () { 
-           LoginData.EmailAddress = $("#EmailAddress").val();
-           LoginData.Password = $("#password").val();
-           $.post(endPoints.Login, LoginData)
-           .done(function (response) {
-
-          
-
-            var JSONObject = JSON.parse(response);
-
-            
-            if (JSONObject.StatusCode=="00"){
-          localStorage.setItem('sessionId', JSONObject.StatusMessage);
-           alert(JSONObject.StatusMessage)} 
-           else{alert(JSONObject.StatusMessage)}
-           })
-           
-           .fail(function (error) { 
-               console.log(error);
-               
-               
-            })
-            
-        });
-    });
-</script>
 
 
 </html>

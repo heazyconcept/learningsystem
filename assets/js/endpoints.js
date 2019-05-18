@@ -1,5 +1,10 @@
-var baseURL = "http://localhost/";
+var baseURL = "http://localhost/lms";
 var endPoints = {
-    Register: baseURL + "lms/api/Account/Register",
-    Login : baseURL + "lms/api/Account/Login", 
+    Register: baseURL + "/api/Account/Register",
+    Login: baseURL + "/api/Account/Login",
+    validation: baseURL + "/api/Account/ValidateSession",
 };
+var url = {
+    dashboard: baseURL + "/user/dashboard.html",
+    login: baseURL + "/user/login.html",
+}
