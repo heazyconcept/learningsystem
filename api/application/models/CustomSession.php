@@ -7,7 +7,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class CustomSession extends CI_Model {
 
-    private $TableName = "session";
+    private $TableName = "customsession";
    
     public function __construct()
     {
