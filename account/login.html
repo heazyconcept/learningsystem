@@ -110,8 +110,8 @@
           .done(function (response) {
             var JSONObject = JSON.parse(response);
             if (JSONObject.StatusCode == "00") {
-              localStorage.setItem('sessionId', JSONObject.StatusMessage);
-              alert(JSONObject.StatusMessage)
+              sessionStorage.setItem('sessionId', JSONObject.StatusMessage);
+              location.href = url.dashboard;
             }
             else { alert(JSONObject.StatusMessage) }
           })
