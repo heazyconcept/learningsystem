@@ -1,7 +1,7 @@
 function ValidateSession() {
-   var sessionId = localstorage.getItem("sessionId");
+   var sessionId = localStorage.getItem("sessionId");
 if (sessionId != null && sessionId != "") {
-   var fullEndPoint = endPoints.validateSession + '/' + sessionId;
+   var fullEndPoint = endPoints.validation + '/' + sessionId;
    $.post(fullEndPoint)
       .done(function (response) {
          var JSONObject = JSON.parse(response);
