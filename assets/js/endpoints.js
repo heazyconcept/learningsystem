@@ -6,5 +6,5 @@ var endPoints = {
 };
 var url = {
     dashboard: baseURL + "/user/dashboard.html",
-    login: baseURL + "/user/login.html",
+    login: baseURL + "/account/login.html",
 }
