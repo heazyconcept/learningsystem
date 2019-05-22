@@ -38,10 +38,16 @@ class Utilities
                 "StatusMessage" => $message,
                 "RedirectUrl" => $redirectURL
             );
-        } elseif ($type == "error") {
+        }elseif ($type == "error") {
             $output = array(
                 "StatusCode" => "99",
                 "StatusMessage" => $message,
+            );
+        }
+        elseif ($type == "autherror") {
+            $output = array(
+                "StatusCode" => "05",
+                "StatusMessage" => "You are not authorized to view this page",
             );
         }
         return json_encode($output);
@@ -218,7 +224,7 @@ class Utilities
     }
     public function GetUserAgent():string
     {
-      return  $_SERVER['HTTP_USER_AGENT'];
+      return  $_SERVER['HTTP_USER_AGENT'] ?? "";
     }
     public function GetIpAddress():string
     {
