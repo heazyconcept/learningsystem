@@ -36,10 +36,19 @@ class ConnectDb extends CI_model
     }
     public function modify_data($options)
     {
-        // $options = json_decode($options);
-        $this->db->where((array) $options->targets);
-        $this->db->update($options->table_name, (array) $options->process_data);
-        return $this->db->affected_rows();
+        try {
+            $this->db->where((array) $options->targets);
+            if ($this->db->update($options->table_name, (array) $options->process_data)) {
+                return $this->db->affected_rows();
+            }
+            
+            
+        } catch (\Throwable $th) {
+            log_message('error', $th->getMessage());
+            return -1;
+        }
+        return 0;
+       
 
     }
     public function delete_data($options)
