@@ -104,12 +104,16 @@ class Account extends CI_Controller {
     public function ValidateSession( string $sessionId)
     {
       try {
+          
          $sessionData = $this->customSession->Get($sessionId);
-         if (!empty($sessionData)) {
+
+         if (!empty( (array) $sessionData)) {
             $IpAddress = $this->utilities->GetIpAddress();
             $userAgent = $this->utilities->GetUserAgent();
-            if ($sessionData->IsActive == 1 && $IpAddress == $sessionData->IpAddress && $userAgent == $sessionData->UserAgent) {
-               echo $this->utilities->outputMessage("success");
+            
+            if ($sessionData->IsActive == 1 && $IpAddress == $sessionData->IpAddress) {
+               
+                echo $this->utilities->outputMessage("success");
                return;
             }
              
@@ -123,6 +127,7 @@ class Account extends CI_Controller {
       echo $this->utilities->outputMessage("error", "Internal server error");
       return;
     }
+
     private function ConfirmAjaxCall()
     {
         if (empty($_REQUEST)) {

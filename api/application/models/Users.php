@@ -59,7 +59,7 @@ class Users extends CI_Model {
                 "targets" => (object) array("Id" => $UserId)
             );
             $DbResponse = $this->connectDb->modify_data((object) $dbOptions);
-            if(!empty($DbResponse))
+            if($DbResponse > 0)
                 return 1;
         } catch (\Throwable $th) {
             log_message('error', $th->getMessage());
@@ -98,6 +98,26 @@ class Users extends CI_Model {
             $dbOptions = array(
                 "table_name" => $this->TableName,
                 "targets" => (object) array("EmailAddress" => $EmailAddress)
+            );
+            $dbResult = $this->connectDb->select_data((object) $dbOptions);
+            if(!empty($dbResult))
+                return $dbResult[0];
+    
+            
+        } catch (\Throwable $th) {
+            
+            log_message('error', $th->getMessage());
+        
+        }
+        return (object) array();
+        
+    }
+    public function GetByPhoneNumber(string $PhoneNumber): stdClass 
+    {
+        try {
+            $dbOptions = array(
+                "table_name" => $this->TableName,
+                "targets" => (object) array("PhoneNumber" => $PhoneNumber)
             );
             $dbResult = $this->connectDb->select_data((object) $dbOptions);
             if(!empty($dbResult))
