@@ -892,9 +892,7 @@ textarea:focus {
   -ms-transition:  all 0.3s ease;
   transition:  all 0.3s ease;
 }
-.ed_item_img img:hover {
 
-}
 .ed_populer_areas_slider .ed_item_description {
 	float:left;
 	width:100%;
