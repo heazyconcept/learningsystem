@@ -1,0 +1,19 @@
+/* style done on dashboard are as follows*/
+.ed_header_top p {
+    margin: 0px;
+    width: 50%;
+    float: left;
+    text-transform: capitalize;
+}
+
+
+/* style done on login are as follows*/
+.ed_toppadder40 {
+    padding-top: 0 !important;
+}
+img.login-pix {
+    max-width: 30% !important;
+    display: block!important;
+    margin-left: auto!important;
+    margin-right: auto!important;
+}
