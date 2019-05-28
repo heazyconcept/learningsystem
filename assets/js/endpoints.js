@@ -3,7 +3,8 @@ var endPoints = {
     Register: baseURL + "/api/Account/Register",
     Login: baseURL + "/api/Account/Login",
     validation: baseURL + "/api/Account/ValidateSession",
-    updateUser: baseURL + "/api/user/UpdateUserDetails/",
+    updateUser: baseURL + "/api/user/UpdateUserDetails",
+    FetchUserDetails: baseURL + "/api/user/FetchUserDetails",
 };
 var url = {
     dashboard: baseURL + "/user/dashboard.html",
