@@ -1,5 +1,6 @@
 function ValidateSession() {
    var sessionId = sessionStorage.getItem("sessionId");
+   console.log(sessionId);
 if (sessionId != null && sessionId != "") {
    var fullEndPoint = endPoints.validation + '/' + sessionId;
    $.post(fullEndPoint)
@@ -8,12 +9,14 @@ if (sessionId != null && sessionId != "") {
          if (JSONObject.StatusCode == "00") {
             return;
          }
-         else window.location.href = url.login
+         else {window.location.href = url.login}
       })
       .fail(function (error) {
          console.log(error);
 
 
       })
-}
+      
+} 
+else {window.location.href = url.login}
 }

@@ -1699,7 +1699,7 @@ a.ed_getinvolved:hover i{
 	}
 .ed_pagetitle ul.breadcrumb li:last-child a{
 	color:#167ac6;
-    cursor: text;
+    cursor: pointer;
 	}
 .ed_pagetitle ul.breadcrumb li i{
 	font-size: 10px;
