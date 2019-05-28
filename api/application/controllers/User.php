@@ -24,6 +24,7 @@ class User extends CI_Controller {
                     "FullName" => $UserData->FullName,
                     "EmailAddress" => $UserData->EmailAddress,
                     "Country" => $UserData->Country,
+                    "PhoneNumber" => $UserData->PhoneNumber,
                 );
                 echo $this->utilities->outputMessage("success", $processedUserData);
                 return;
