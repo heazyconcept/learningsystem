@@ -5,7 +5,15 @@
     float: left;
     text-transform: capitalize;
 }
-
+.ed_header_bottom {
+    width: 100%;
+    float: left;
+    background-color: #cbeff5;
+}
+.ed_pagetitle ul.breadcrumb li:last-child a {
+    color: #98f3ea;
+    cursor: pointer;
+}
 
 /* style done on login are as follows*/
 .ed_toppadder40 {

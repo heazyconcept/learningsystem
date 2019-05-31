@@ -49,7 +49,7 @@
 					<div class="ed_profile_img">
 					<img src="images/content/S01_big.jpg" alt="Dashboard Image" />
 					</div>
-					<h3>andre house</h3>
+					<h3 id="screenName" >andre house</h3>
 					 <div class="ed_tabs_left">
 						<ul class="nav nav-tabs">
 						  <li class="active"><a href="#dashboard" data-toggle="tab">dashboard</a></li>
@@ -70,7 +70,7 @@
 						<div class="ed_dashboard_tab_info">
 						<h1>hello, <span>student</span></h1>
 						<h1>welcome to dashboard</h1>
-						<p>Hi <strong>Andre House</strong>, here you have to see and update your profile, subscribed courses, activities, notifications and other things. All the above updates can be modified from the left panel provided.</p>
+						<p>Hi <strong id="welcomeName">Andre House</strong>, here you have to see and update your profile, subscribed courses, activities, notifications and other things. All the above updates can be modified from the left panel provided.</p>
 						</div>
 					</div>
 					<div class="tab-pane" id="courses">
@@ -335,21 +335,26 @@
 									<div role="tabpanel" class="tab-pane active" id="view">
 									<div class="ed_dashboard_inner_tab">
 										<h2>your profile</h2>
-										<table id="profile_view_settings">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Id</th>
-												</tr>
-											</thead>
-
-											<tbody>
-												<tr>
-													<td>Andre House</td>
-													<td><a href="#">andrehouse@123</a></td>
-												</tr>												
-											</tbody>
-										</table>
+										<form class="ed_tabpersonal" id="Userprofile">
+												<div class="form-group">
+												<input type="text" class="form-control" name="Your Name" id="PrFullName" disabled>
+												</div>
+												<div class="form-group">
+												</div>
+												<div class="form-group">
+														<label class="control-label">Email :</label>
+														<input type="email" class="form-control" name="EmailAddress" id="PrEmailAddress"  disabled>
+												</div>
+															<div class="form-group">
+																	<label class="control-label">Phone Number :</label>
+																	<input type="text" class="form-control" name="PhoneNumber" id="PrPhoneNumber" disabled >
+																</div>
+																<div class="form-group">
+																		<label class="control-label">Country :</label>
+																		<input type="text" class="form-control" name="Country" id="PrCountry" disabled >
+																</div>
+																<p>This field can be seen by: <strong>Everyone</strong></p>
+											</form>
 									</div>
 									</div>
 									<div role="tabpanel" class="tab-pane" id="edit">
@@ -360,7 +365,6 @@
 												<input type="text" class="form-control" name="Your Name" id="FullName" placeholder="Your Name">
 												</div>
 												<div class="form-group">
-												<p>This field can be seen by: <strong>Everyone</strong></p>
 												</div>
 												<div class="form-group">
 														<label class="control-label">Email :</label>
@@ -422,14 +426,12 @@
 									<div class="ed_dashboard_inner_tab">
 										<h2>general setting</h2>
 										<form class="ed_tabpersonal" id="settingForm">
-											<div class="form-group">
-											<input type="text" class="form-control"  placeholder="Your Account Email" disabled>
-											</div>
+											
 											<div class="form-group">
 											<p>Change Password <strong>(leave blank for no change)</strong></p>
 											</div>
 											<div class="form-group">
-													<input type="password" class="form-control" name="oldPassword" placeholder="old Password">
+													<input type="password" class="form-control" name="oldPassword"id="oldPassword" placeholder="old Password">
 													</div>
 											<div class="form-group">
 											<input type="password" class="form-control" name="NewPassword" id="NewPassword" placeholder="New Password">
@@ -569,6 +571,7 @@
 <script type="text/javascript" src="../assets/js/plugins/countto/jquery.countTo.js"></script>
 <script type="text/javascript" src="../assets/js/plugins/countto/jquery.appear.js"></script>
 <script type="text/javascript" src="../assets/js/custom.js"></script> 
+<script src="../assets/js/utilities.js"></script>
 <script src="../assets/js/endpoints.js"></script>
 <script src="../assets/js/security.js"></script>
 
@@ -589,7 +592,13 @@
                     $("#FullName").val(userDetails.FullName);
                     $("#EmailAddress").val(userDetails.EmailAddress);
                     $("#PhoneNumber").val(userDetails.PhoneNumber);
-                    $("#Country").val(userDetails.Country);
+										$("#Country").val(userDetails.Country);
+										$("#PrFullName").val(userDetails.FullName);
+                    $("#PrEmailAddress").val(userDetails.EmailAddress);
+                    $("#PrPhoneNumber").val(userDetails.PhoneNumber);
+										$("#PrCountry").val(userDetails.Country);
+										$("#screenName").replaceWith( userDetails.FullName);
+										$("#welcomeName").replaceWith( userDetails.FullName);
                 }
 
 
@@ -600,11 +609,12 @@
 							//   $('body').loading('start');
 	
 							var formData = new FormData($('form#UserUpdateForm')[0]);
-							formData.append("SessionId", GetSessionId());
+							formData.append("SessionId", sessionId);
 							AjaxInit(endPoints.updateUser, formData);
 	
 	
 					}); 
+					
 		})
 		
 	</script>
